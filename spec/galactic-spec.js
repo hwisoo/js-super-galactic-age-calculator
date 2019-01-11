@@ -21,7 +21,11 @@ describe('Galactic', function () {
   });
 
   it('should correctly return the objects mearcuryYears property in mercury age', function () {
-    expect(reusableGalactic.getMercuryAge()).toEqual('136.93');
+    expect(reusableGalactic.getMercuryAge()).toEqual(136.93);
+  });
+
+  it('should correctly return the objects venusYears property in mercury age', function () {
+    expect(reusableGalactic.getVenusAge()).toEqual(53.66);
   });
 
 
