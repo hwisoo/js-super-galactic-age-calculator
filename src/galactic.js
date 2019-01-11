@@ -1,3 +1,5 @@
+const lifeExpectancy = 78.7;
+
 export class Galactic {
 
   constructor(years) {
@@ -44,4 +46,15 @@ export class Galactic {
   getNeptuneAge() {
     return this.neptuneYears;
   }
+
+  getLifeExpectancy() {
+    let difference = (lifeExpectancy - this.getAge()).toFixed(2);
+    if (difference > 0) {
+      console.log("You have " + difference + " years to live to reach life expectancy.");
+    } else if (difference <= 0) {
+      console.log("You are " + -difference + " years past life expectancy.");
+    }
+  }
+
+
 }
