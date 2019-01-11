@@ -6,7 +6,12 @@ import { Galactic } from './galactic.js';
 import earthIcon from './images/earth.jpg';
 import mercuryIcon from './images/mercury.jpg';
 import venusIcon from './images/venus.png';
-import earthIcon from './images/earth.jpg';
+import marsIcon from './images/mars.jpg';
+import jupiterIcon from './images/jupiter.jpg';
+import saturnIcon from './images/saturn.jpg';
+import uranusIcon from './images/uranus.jpg';
+import neptuneIcon from './images/neptune.jpg';
+
 
 var earthImg = document.getElementById('earth');
 earthImg.src = earthIcon;
@@ -14,6 +19,16 @@ var mercuryImg = document.getElementById('mercury');
 mercuryImg.src = mercuryIcon;
 var venusImg = document.getElementById('venus');
 venusImg.src = venusIcon;
+var marsImg = document.getElementById('mars');
+marsImg.src = marsIcon;
+var jupiterImg = document.getElementById('jupiter');
+jupiterImg.src = jupiterIcon;
+var saturnImg = document.getElementById('saturn');
+saturnImg.src = saturnIcon;
+var uranusImg = document.getElementById('uranus');
+uranusImg.src = uranusIcon;
+var neptuneImg = document.getElementById('neptune');
+neptuneImg.src = neptuneIcon;
 
 $(document).ready(function () {
   // const mercury = 0.241;
