@@ -86,8 +86,30 @@ describe('Galactic', function () {
 
   // Test age and life expectancy difference
   it('should correctly return the objects the difference between age and life expectancy on earth', function () {
-    expect(reusableGalactic.getDifference(earth)).toEqual(0.47);
+    expect(reusableGalactic.getDifference(earth)).toEqual(45);
   });
+  it('should correctly return the objects the difference between age and life expectancy on mercury', function () {
+    expect(reusableGalactic.getDifference(mercury)).toEqual(186.71999999999997);
+  });
+  it('should correctly return the objects the difference between age and life expectancy on venus', function () {
+    expect(reusableGalactic.getDifference(venus)).toEqual(73.17);
+  });
+  it('should correctly return the objects the difference between age and life expectancy on mars', function () {
+    expect(reusableGalactic.getDifference(mars)).toEqual(23.94);
+  });
+  it('should correctly return the objects the difference between age and life expectancy on jupiter', function () {
+    expect(reusableGalactic.getDifference(jupiter)).toEqual(3.78);
+  });
+  it('should correctly return the objects the difference between age and life expectancy on saturn', function () {
+    expect(reusableGalactic.getDifference(saturn)).toEqual(1.52);
+  });
+  it('should correctly return the objects the difference between age and life expectancy on uranus', function () {
+    expect(reusableGalactic.getDifference(uranus)).toEqual(0.54);
+  });
+  it('should correctly return the objects the difference between age and life expectancy on neptune', function () {
+    expect(reusableGalactic.getDifference(neptune)).toEqual(0.26999999999999996);
+  });
+
 
 });
 
