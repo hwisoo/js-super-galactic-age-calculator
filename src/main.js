@@ -50,7 +50,7 @@ $(document).ready(function () {
     event.preventDefault();
     let age = parseInt($("#age").val());
     let galactic = new Galactic(age);
-    const planets = ["earth", "mercury", "venus", "mars", "jupiter", "saturn", "uranus", "neptune"]
+    const planets = ["earth", "mercury", "venus", "mars", "jupiter", "saturn", "uranus", "neptune"];
 
     for (let i = 0; i < planets.length; i++) {
       populate(planets[i]);
@@ -60,7 +60,7 @@ $(document).ready(function () {
       let rate;
       let ageElement = document.getElementById(planet + "-age");
       let lifeElement = document.getElementById(planet + "-life");
-      let diffElement = document.getElementById(planet + "-diff")
+      let diffElement = document.getElementById(planet + "-diff");
       if (planet == "earth") {
         rate = earth;
       } else if (planet == "mercury") {

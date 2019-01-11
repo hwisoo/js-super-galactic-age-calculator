@@ -9,23 +9,31 @@
 A simple web app, that takes the age of user input and calculates their age on other planets.
 
 ## Specifications
-  * Program takes input age and returns their age in Mercury years.
+  * Program takes input age and returns their age in mercury years.
     - Example Input : 20 earth years
-    - Example Output : ["4.8 mercury years"]
-  * Program takes input age and returns their age in Venus years.
+    - Example Output : ["82.99 mercury years"]
+  * Program output life expectancy for each planet based on earth's life expectancy of 78 years.
+    - Example Output : Life expectancy: ["6.55 Jupiter years"]
+  * Program takes input age and outputs the difference between age and life expectancy for each planet.
     - Example Input : 20 earth years
-    - Example Output : ["12.4 Venus years"]
-  * Program takes input age and returns their age in Mars years.
-    - Example Input : 20 earth years
-    - Example Output : ["37.6 Mars years"]
-    * Program takes input age and returns their age in Jupiter years.
-    - Example Input : 20 earth years
-    - Example Output : ["237.2 mercury years"]
+    - Example Output : Age: ["0.12 Neptune years"], Life Expectancy: ["0.47 Neptune years"], Difference: ["0.35 Neptune years"]
 
 ## Setup/Installation Requirements
 
-* Clone Repository
-* Open index.html
+1\. Clone the repository:
+
+```
+git clone https://github.com/hwisoo/js-super-galactic-age-calculator.git
+```
+2\. Navigate into project directory
+
+
+3\. Install the dependencies:
+
+```bash
+npm install
+```
+
 
 
 
