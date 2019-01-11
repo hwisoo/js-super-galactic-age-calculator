@@ -1,16 +1,23 @@
 const lifeExpectancy = 78.7;
+const mercury = 0.241;
+const venus = 0.615;
+const mars = 1.88;
+const jupiter = 11.9;
+const saturn = 29.5;
+const uranus = 84;
+const neptune = 164.8;
 
 export class Galactic {
 
   constructor(years) {
     this.years = years;
-    this.mercuryYears = parseFloat((years / 0.241).toFixed(2));
-    this.venusYears = parseFloat((years / 0.615).toFixed(2));
-    this.marsYears = parseFloat((years / 1.88).toFixed(2));
-    this.jupiterYears = parseFloat((years / 11.9).toFixed(2));
-    this.saturnYears = parseFloat((years / 29.5).toFixed(2));
-    this.uranusYears = parseFloat((years / 84).toFixed(2));
-    this.neptuneYears = parseFloat((years / 164.8).toFixed(2));
+    this.mercuryYears = parseFloat((years / mercury).toFixed(2));
+    this.venusYears = parseFloat((years / venus).toFixed(2));
+    this.marsYears = parseFloat((years / mars).toFixed(2));
+    this.jupiterYears = parseFloat((years / jupiter).toFixed(2));
+    this.saturnYears = parseFloat((years / saturn).toFixed(2));
+    this.uranusYears = parseFloat((years / uranus).toFixed(2));
+    this.neptuneYears = parseFloat((years / neptune).toFixed(2));
   }
 
   getAge() {
@@ -47,13 +54,9 @@ export class Galactic {
     return this.neptuneYears;
   }
 
-  getLifeExpectancy() {
-    let difference = (lifeExpectancy - this.getAge()).toFixed(2);
-    if (difference > 0) {
-      console.log("You have " + difference + " years to live to reach life expectancy.");
-    } else if (difference <= 0) {
-      console.log("You are " + -difference + " years past life expectancy.");
-    }
+  getLifeExpectancy(planet) {
+    let difference = ((lifeExpectancy - this.getAge()) / planet).toFixed(2);
+    return difference;
   }
 
 
