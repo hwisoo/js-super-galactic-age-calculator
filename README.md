@@ -1,12 +1,12 @@
 # _Super Galactic Age Calculator_
 
-#### _Super Galactic Age Calculator using Javascript class and Webpack, Nov 2018_
+#### _Super Galactic Age Calculator using Javascript class and Webpack, Jan 2019_
 
 #### By _**James Cho**_
 
 ## Description
 
-A simple web app, that takes the age of user input and calculates their age on other planets.
+A simple web app, that takes the age of user input and calculates their age, life expectancy and the difference on other planets.
 
 ## Specifications
   * Program takes input age and returns their age in mercury years.
@@ -33,6 +33,17 @@ git clone https://github.com/hwisoo/js-super-galactic-age-calculator.git
 ```bash
 npm install
 ```
+4\. Run the Program:
+
+```bash
+npm run start
+```
+
+5\. For testing:
+
+```bash
+npm run test
+```
 
 
 
@@ -47,7 +58,7 @@ no known bugs
 
 ## Technologies Used
 
-HTML, CSS, Bootstrap, Javascript and JQuery
+HTML, CSS, Bootstrap, Javascript ,JQuery, Webpack, Karma, Jasmine, Git
 
 ### License
 
