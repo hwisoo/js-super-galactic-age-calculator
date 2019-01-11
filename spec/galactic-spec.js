@@ -32,42 +32,36 @@ describe('Galactic', function () {
     expect(ol.length).toEqual(1);
   });
 
+  // Test age
   it('should correctly return the objects years property in earth age', function () {
     expect(reusableGalactic.getAge(earth)).toEqual(33);
   });
-
   it('should correctly return the objects years in mercury age', function () {
     expect(reusableGalactic.getAge(mercury)).toEqual(136.93);
   });
-
   it('should correctly return the objects venus age', function () {
     expect(reusableGalactic.getAge(venus)).toEqual(53.66);
   });
-
   it('should correctly return the objects mars age', function () {
     expect(reusableGalactic.getAge(mars)).toEqual(17.55);
   });
-
   it('should correctly return the objects jupiter age', function () {
     expect(reusableGalactic.getAge(jupiter)).toEqual(2.77);
   });
-
   it('should correctly return the objects saturn age', function () {
     expect(reusableGalactic.getAge(saturn)).toEqual(1.12);
   });
-
   it('should correctly return the objects uranus age', function () {
     expect(reusableGalactic.getAge(uranus)).toEqual(0.39);
   });
-
   it('should correctly return the objects neptune age', function () {
     expect(reusableGalactic.getAge(neptune)).toEqual(0.2);
   });
 
+  // Test life expectancy
   it('should correctly return the objects life expectancy on earth', function () {
     expect(reusableGalactic.getLifeExpectancy(earth)).toEqual(78);
   });
-
   it('should correctly return the objects life expectancy on mercury', function () {
     expect(reusableGalactic.getLifeExpectancy(mercury)).toEqual(323.65);
   });
@@ -88,6 +82,11 @@ describe('Galactic', function () {
   });
   it('should correctly return the objects life expectancy on neptune', function () {
     expect(reusableGalactic.getLifeExpectancy(neptune)).toEqual(0.47);
+  });
+
+  // Test age and life expectancy difference
+  it('should correctly return the objects the difference between age and life expectancy on earth', function () {
+    expect(reusableGalactic.getDifference(earth)).toEqual(0.47);
   });
 
 });

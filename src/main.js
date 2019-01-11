@@ -34,25 +34,6 @@ neptuneImg.src = neptuneIcon;
 
 
 $(document).ready(function () {
-  // let earthAge = document.getElementById("earth-age");
-  let mercuryAge = document.getElementById("mercury-age");
-  let venusAge = document.getElementById("venus-age");
-  let marsAge = document.getElementById("mars-age");
-  let jupiterAge = document.getElementById("jupiter-age");
-  let saturnAge = document.getElementById("saturn-age");
-  let uranusAge = document.getElementById("uranus-age");
-  let neptuneAge = document.getElementById("neptune-age");
-
-  let earthLife = document.getElementById("earth-life");
-  let mercuryLife = document.getElementById("mercury-life");
-  let venusLife = document.getElementById("venus-life");
-  let marsLife = document.getElementById("mars-life");
-  let jupiterLife = document.getElementById("jupiter-life");
-  let saturnLife = document.getElementById("saturn-life");
-  let uranusLife = document.getElementById("uranus-life");
-  let neptuneLife = document.getElementById("neptune-life");
-
-  let earthDiff = document.getElementById("earth-diff");
 
   const earth = 1;
   const mercury = 0.241;
@@ -66,18 +47,14 @@ $(document).ready(function () {
 
 
   $('#galactic').submit(function (event) {
-
     event.preventDefault();
     let age = parseInt($("#age").val());
     let galactic = new Galactic(age);
+    const planets = ["earth", "mercury", "venus", "mars", "jupiter", "saturn", "uranus", "neptune"]
 
-    populate("earth");
-    populate("mercury");
-    populate("venus");
-    populate("mars");
-    populate("jupiter");
-    populate("saturn");
-
+    for (let i = 0; i < planets.length; i++) {
+      populate(planets[i]);
+    }
 
     function populate(planet) {
       let rate;
@@ -101,11 +78,9 @@ $(document).ready(function () {
       } else if (planet == "neptune") {
         rate = neptune;
       }
-
       ageElement.innerHTML = "Age: " + galactic.getAge(rate) + " years";
       lifeElement.innerHTML = "Life Expectancy: " + galactic.getLifeExpectancy(rate) + " years";
-      diffElement.innerHTML = "Difference: " + galactic.getRemainingYears(rate) + " years";
+      diffElement.innerHTML = "Difference: " + galactic.getDifference(rate) + " years";
     }
-
   });
 });

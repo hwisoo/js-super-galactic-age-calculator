@@ -15,7 +15,7 @@ export class Galactic {
     return parseFloat((lifeExpectancy / planet).toFixed(2));
   }
 
-  getRemainingYears(planet) {
+  getDifference(planet) {
     return parseFloat((lifeExpectancy / planet).toFixed(2) -
       (this.years / planet).toFixed(2));
   }
