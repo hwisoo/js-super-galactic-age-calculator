@@ -27,13 +27,13 @@ describe('Galactic', function () {
     console.log(reusableGalactic);
   });
 
-  it('should test whether a Galactic object has all 8 properties', function () {
+  it('should test whether a Galactic object has all years property', function () {
     let ol = Object.keys(reusableGalactic);
-    expect(ol.length).toEqual(8);
+    expect(ol.length).toEqual(1);
   });
 
   it('should correctly return the objects years property in earth age', function () {
-    expect(reusableGalactic.getAge()).toEqual(33);
+    expect(reusableGalactic.getAge(earth)).toEqual(33);
   });
 
   it('should correctly return the objects years in mercury age', function () {
@@ -52,14 +52,43 @@ describe('Galactic', function () {
     expect(reusableGalactic.getAge(jupiter)).toEqual(2.77);
   });
 
+  it('should correctly return the objects saturn age', function () {
+    expect(reusableGalactic.getAge(saturn)).toEqual(1.12);
+  });
+
   it('should correctly return the objects uranus age', function () {
     expect(reusableGalactic.getAge(uranus)).toEqual(0.39);
   });
 
   it('should correctly return the objects neptune age', function () {
-    expect(reusableGalactic.getNeptuneAge(neptune)).toEqual(0.2);
+    expect(reusableGalactic.getAge(neptune)).toEqual(0.2);
   });
 
+  it('should correctly return the objects life expectancy on earth', function () {
+    expect(reusableGalactic.getLifeExpectancy(earth)).toEqual(78);
+  });
+
+  it('should correctly return the objects life expectancy on mercury', function () {
+    expect(reusableGalactic.getLifeExpectancy(mercury)).toEqual(323.65);
+  });
+  it('should correctly return the objects life expectancy on venus', function () {
+    expect(reusableGalactic.getLifeExpectancy(venus)).toEqual(126.83);
+  });
+  it('should correctly return the objects life expectancy on mars', function () {
+    expect(reusableGalactic.getLifeExpectancy(mars)).toEqual(41.49);
+  });
+  it('should correctly return the objects life expectancy on jupiter', function () {
+    expect(reusableGalactic.getLifeExpectancy(jupiter)).toEqual(6.55);
+  });
+  it('should correctly return the objects life expectancy on saturn', function () {
+    expect(reusableGalactic.getLifeExpectancy(saturn)).toEqual(2.64);
+  });
+  it('should correctly return the objects life expectancy on uranus', function () {
+    expect(reusableGalactic.getLifeExpectancy(uranus)).toEqual(0.93);
+  });
+  it('should correctly return the objects life expectancy on neptune', function () {
+    expect(reusableGalactic.getLifeExpectancy(neptune)).toEqual(0.47);
+  });
 
 });
 

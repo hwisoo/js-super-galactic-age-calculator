@@ -1,4 +1,4 @@
-const lifeExpectancy = 78.7;
+const lifeExpectancy = 78;
 
 
 export class Galactic {
@@ -12,8 +12,7 @@ export class Galactic {
   }
 
   getLifeExpectancy(planet) {
-    let difference = ((lifeExpectancy - this.getAge()) / planet).toFixed(2);
-    return difference;
+    return parseFloat((lifeExpectancy / planet).toFixed(2));
   }
 
 
