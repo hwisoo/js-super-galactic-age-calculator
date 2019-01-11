@@ -4,9 +4,16 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Galactic } from './galactic.js';
 import earthIcon from './images/earth.jpg';
+import mercuryIcon from './images/mercury.jpg';
+import venusIcon from './images/venus.png';
+import earthIcon from './images/earth.jpg';
 
 var earthImg = document.getElementById('earth');
 earthImg.src = earthIcon;
+var mercuryImg = document.getElementById('mercury');
+mercuryImg.src = mercuryIcon;
+var venusImg = document.getElementById('venus');
+venusImg.src = venusIcon;
 
 $(document).ready(function () {
   // const mercury = 0.241;

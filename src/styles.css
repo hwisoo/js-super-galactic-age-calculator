@@ -1,0 +1,20 @@
+* {
+  background-color: black;
+  color: white;
+  
+}
+
+.planets {
+  padding-left: 100px;
+  width:inherit;
+  height: inherit;
+  max-width: inherit;
+}
+img {
+  height: 150px;
+  width: 150px;
+}
+
+ #galactic {
+  padding-left: 100px;
+}
