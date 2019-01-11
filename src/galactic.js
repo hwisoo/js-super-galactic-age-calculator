@@ -44,6 +44,9 @@ export class Galactic {
     return this.jupiterYears;
   }
 
+  getSaturnAge() {
+    return this.saturnYears;
+  }
   // Returns age in Uranus years.
   getUranusAge() {
     return this.uranusYears;
@@ -58,6 +61,8 @@ export class Galactic {
     let difference = ((lifeExpectancy - this.getAge()) / planet).toFixed(2);
     return difference;
   }
+
+
 
 
 }
