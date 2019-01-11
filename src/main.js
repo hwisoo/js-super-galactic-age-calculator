@@ -41,13 +41,14 @@ let uranusAge = document.getElementById("uranus-age");
 let neptuneAge = document.getElementById("neptune-age");
 
 $(document).ready(function () {
-  // const mercury = 0.241;
-  // const venus = 0.615;
-  // const mars = 1.88;
-  // const jupiter = 11.9;
-  // const saturn = 29.5;
-  // const uranus = 84;
-  // const neptune = 164.8;
+  const earth = 1;
+  const mercury = 0.241;
+  const venus = 0.615;
+  const mars = 1.88;
+  const jupiter = 11.9;
+  const saturn = 29.5;
+  const uranus = 84;
+  const neptune = 164.8;
 
 
 
@@ -58,13 +59,13 @@ $(document).ready(function () {
     let galactic = new Galactic(age);
 
 
-    earthAge.innerHTML = "Age: " + galactic.getAge() + " years";
-    mercuryAge.innerHTML = "Age: " + galactic.getMercuryAge() + " years";
-    venusAge.innerHTML = "Age: " + galactic.getVenusAge() + " years";
-    marsAge.innerHTML = "Age: " + galactic.getMarsAge() + " years";
-    jupiterAge.innerHTML = "Age: " + galactic.getJupiterAge() + " years";
-    saturnAge.innerHTML = "Age: " + galactic.getSaturnAge() + " years";
-    uranusAge.innerHTML = "Age: " + galactic.getUranusAge() + " years";
-    neptuneAge.innerHTML = "Age: " + galactic.getNeptuneAge() + " years";
+    earthAge.innerHTML = "Age: " + galactic.getAge(earth) + " years";
+    mercuryAge.innerHTML = "Age: " + galactic.getAge(mercury) + " years";
+    venusAge.innerHTML = "Age: " + galactic.getAge(venus) + " years";
+    marsAge.innerHTML = "Age: " + galactic.getAge(mars) + " years";
+    jupiterAge.innerHTML = "Age: " + galactic.getAge(jupiter) + " years";
+    saturnAge.innerHTML = "Age: " + galactic.getAge(saturn) + " years";
+    uranusAge.innerHTML = "Age: " + galactic.getAge(uranus) + " years";
+    neptuneAge.innerHTML = "Age: " + galactic.getAge(neptune) + " years";
   });
 });
