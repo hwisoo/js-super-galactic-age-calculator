@@ -43,14 +43,26 @@ $(document).ready(function () {
   const saturn = 29.5;
   const uranus = 84;
   const neptune = 164.8;
+  const planets = ["earth", "mercury", "venus", "mars", "jupiter", "saturn", "uranus", "neptune"];
 
 
-
-  $('#galactic').submit(function (event) {
+  $('.galactic').submit(function (event) {
     event.preventDefault();
-    let age = parseInt($("#age").val());
+    let age;
+    let birthday = new Date($("#date").val());
+    const getAge = birthDate => Math.floor((new Date() - new Date(birthDate).getTime()) / 3.15576e+10);
+    age = getAge(birthday);
+
+    if (parseInt($("#age").val()) && age) {
+      alert("Please enter only one field before submitting");
+    }
+    else if (parseInt($("#age").val())) {
+      age = parseInt($("#age").val());
+    }
+    else {
+      age = getAge(birthday);
+    }
     let galactic = new Galactic(age);
-    const planets = ["earth", "mercury", "venus", "mars", "jupiter", "saturn", "uranus", "neptune"];
 
     for (let i = 0; i < planets.length; i++) {
       populate(planets[i]);
